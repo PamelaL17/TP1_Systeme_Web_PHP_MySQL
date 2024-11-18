@@ -30,10 +30,10 @@ CREATE TABLE `articles` (
   `categorie_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `auteur_id` (`auteur_id`),
-  KEY `categorie_id` (`categorie_id`),
-  CONSTRAINT `articles_ibfk_1` FOREIGN KEY (`auteur_id`) REFERENCES `auteurs` (`id`),
-  CONSTRAINT `articles_ibfk_2` FOREIGN KEY (`categorie_id`) REFERENCES `categories` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  KEY `categorie_id` (`categorie_id`)
+  /*CONSTRAINT `articles_ibfk_1` FOREIGN KEY (`auteur_id`) REFERENCES `auteurs` (`id`),
+  CONSTRAINT `articles_ibfk_2` FOREIGN KEY (`categorie_id`) REFERENCES `categories` (`id`) */
+) /*ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
